@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "BiteByte (Java server)",
+      "request": "launch",
+      "mainClass": "com.bitebyte.BiteByteApplication",
+      "projectName": "bitebyte-server",
+      "cwd": "${workspaceFolder}/server-java",
+      "preLaunchTask": "build-client"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "bitebyte",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js",
+    "test": "node server/test-platform.js",
+    "server": "node server/server.js",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "setup": "npm install --prefix client && npm run build --prefix client",
+    "java": "npm run setup && cd server-java && mvn spring-boot:run"
+  },
+  "keywords": [
+    "bitebyte",
+    "recipe-sharing",
+    "culinary",
+    "full-stack",
+    "react",
+    "express"
+  ],
+  "author": "BiteByte Team",
+  "license": "ISC",
+  "description": "BiteByte with Admin & User Dashboards, Recipe Discovery, Ratings & Reviews, and Activity Monitoring",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.12.1",
+    "multer": "^2.4.0",
+    "uuid": "^14.0.2"
+  }
+}

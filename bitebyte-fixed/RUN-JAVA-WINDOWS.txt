@@ -1,0 +1,30 @@
+BiteByte — Run with the Java backend (Windows / VS Code)
+
+WHY THE COMMAND FAILED
+The project root does not contain pom.xml. The Maven project file is inside server-java.
+Running `mvn spring-boot:run` from the project root therefore makes Maven unable to find the Spring Boot plugin for this project.
+
+OPTION 1 — AUTOMATIC (recommended)
+From the project root, double-click `run-java.bat`.
+
+OPTION 2 — VS CODE TERMINAL
+Open PowerShell in the project root (the folder containing `client` and `server-java`) and run:
+
+  cd server-java
+  mvn spring-boot:run
+
+Keep that terminal open while the backend runs. Open http://localhost:5000 in your browser.
+
+OPTION 3 — BUILD THE FRONTEND AND RUN THE JAVA BACKEND
+From the project root:
+
+  cd client
+  npm install
+  npm run build
+  cd ..
+  cd server-java
+  mvn spring-boot:run
+
+Requirements: JDK 17+ (check with `java -version`), Maven (check with `mvn -v`), and Node.js/npm (check with `node -v` and `npm -v`).
+
+Note: this Java backend is implemented with Spring Boot; it is not a plain Java Servlet backend.

@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "install-client",
+      "type": "shell",
+      "command": "npm install",
+      "options": { "cwd": "${workspaceFolder}/client" },
+      "problemMatcher": []
+    },
+    {
+      "label": "build-client",
+      "type": "shell",
+      "command": "npm run build",
+      "options": { "cwd": "${workspaceFolder}/client" },
+      "dependsOn": ["install-client"],
+      "problemMatcher": []
+    },
+    {
+      "label": "run-java-server (maven)",
+      "type": "shell",
+      "command": "mvn spring-boot:run",
+      "options": { "cwd": "${workspaceFolder}/server-java" },
+      "dependsOn": ["build-client"],
+      "problemMatcher": []
+    }
+  ]
+}
